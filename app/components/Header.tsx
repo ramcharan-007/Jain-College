@@ -522,7 +522,6 @@ const Header = () => {
     { name: "Programmes", href: "/programmes", hasMegaMenu: true },
     { name: "Admissions", href: "/admissions" },
     { name: "Explore", href: "/explore", hasMegaMenu: true },
-    { name: "MySchoolOne", href: "/myschoolone" },
     { name: "Contact Us", href: "/contact" },
   ];
 

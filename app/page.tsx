@@ -8,6 +8,7 @@ import HallmarksSection from "./components/HallmarksSection";
 import LegacySection from "./components/LegacySection";
 import AlumniSection from "./components/AlumniSection";
 import CTASection from "./components/CTASection";
+import EnquirySection from "./components/EnquirySection";
 import Footer from "./components/Footer";
 
 export default function Home() {
@@ -23,6 +24,7 @@ export default function Home() {
       <LegacySection />
       <AlumniSection />
       <CTASection />
+      <EnquirySection />
       <Footer />
     </main>
   );
