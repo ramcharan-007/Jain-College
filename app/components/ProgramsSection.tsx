@@ -1,43 +1,34 @@
-import Link from "next/link";
-
 const ProgramsSection = () => {
-  const programs = [
+  const ugPrograms = [
     {
-      title: "IGCSE",
-      subtitle: "Cambridge International",
-      description:
-        "International General Certificate of Secondary Education - A globally recognized qualification for students aged 14-16.",
-      features: ["Grades 9-10", "Cambridge Assessment", "Global Recognition"],
+      category: "B.Com Programs",
       color: "bg-[#001C54]",
+      programs: [
+        "B.Com (Regular)",
+        "B.Com (Business Data Analytics – BDA)",
+        "B.Com (ACCA)",
+        "B.Com (Logistics & Supply Chain Management – LSCM)",
+      ],
     },
     {
-      title: "IBDP",
-      subtitle: "International Baccalaureate",
-      description:
-        "A rigorous pre-university course preparing students for success at university and life beyond.",
-      features: ["Grades 11-12", "Diploma Programme", "World Schools"],
+      category: "BBA Programs",
       color: "bg-[#16336e]",
+      programs: [
+        "BBA (Regular)",
+        "BBA (Aviation Management)",
+        "BBA (Business Analytics)",
+        "BBA (Digital Marketing)",
+      ],
     },
     {
-      title: "CBSE",
-      subtitle: "Central Board of Secondary Education",
-      description:
-        "National curriculum recognized across India with comprehensive academic foundation.",
-      features: ["Grades 6-12", "National Board", "Science & Commerce"],
+      category: "Computer Applications",
       color: "bg-[#001C54]",
-    },
-    {
-      title: "A-ICE",
-      subtitle: "Cambridge Advanced Level",
-      description:
-        "Advanced International Certificate of Education for students aiming for top universities.",
-      features: ["Grades 11-12", "AS & A Levels", "University Prep"],
-      color: "bg-[#16336e]",
+      programs: ["BCA", "BCA (Artificial Intelligence & Machine Learning)"],
     },
   ];
 
   return (
-    <section className="py-20 bg-[#F8C300]">
+    <section id="programmes" className="py-20 bg-[#F8C300]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16">
@@ -46,39 +37,32 @@ const ProgramsSection = () => {
             Our Academic Programs
           </h2>
           <div className="w-24 h-1 bg-[#001C54] mx-auto rounded-full"></div>
-          <p className="mt-6 text-[#001C54]/80 max-w-2xl mx-auto">
-            We offer a variety of internationally recognized curricula designed
-            to prepare students for success in a rapidly changing global
-            environment.
+          <p className="mt-6 text-[#001C54]/80 max-w-3xl mx-auto">
+            The program offers a diverse range of undergraduate and postgraduate
+            pathways designed to develop strong business knowledge, analytical
+            thinking, and employability skills required to succeed in a global
+            workplace.
           </p>
         </div>
 
-        {/* Programs Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {programs.map((program, index) => (
+        {/* UG Programs Grid */}
+        <h3 className="text-2xl font-bold text-[#001C54] mb-6">
+          Undergraduate Programs
+        </h3>
+        <div className="grid md:grid-cols-3 gap-6 mb-12">
+          {ugPrograms.map((group, index) => (
             <div
               key={index}
-              className={`${program.color} rounded-2xl p-6 text-white hover:shadow-2xl transition-all hover:-translate-y-2 group`}
+              className={`${group.color} rounded-2xl p-6 text-white hover:shadow-2xl transition-all hover:-translate-y-1`}
             >
-              {/* Program Header */}
-              <div className="mb-4">
-                <h3 className="text-2xl font-bold mb-1">{program.title}</h3>
-                <p className="text-[#F8C300] text-sm font-medium">
-                  {program.subtitle}
-                </p>
-              </div>
-
-              {/* Description */}
-              <p className="text-white/80 text-sm mb-6 min-h-[80px]">
-                {program.description}
-              </p>
-
-              {/* Features */}
-              <ul className="space-y-2 mb-6">
-                {program.features.map((feature, idx) => (
-                  <li key={idx} className="flex items-center gap-2 text-sm">
+              <h4 className="text-xl font-bold mb-4 text-[#F8C300]">
+                {group.category}
+              </h4>
+              <ul className="space-y-3">
+                {group.programs.map((program, idx) => (
+                  <li key={idx} className="flex items-start gap-2 text-sm">
                     <svg
-                      className="w-4 h-4 text-[#F8C300]"
+                      className="w-5 h-5 text-[#F8C300] flex-shrink-0 mt-0.5"
                       fill="currentColor"
                       viewBox="0 0 20 20"
                     >
@@ -88,33 +72,38 @@ const ProgramsSection = () => {
                         clipRule="evenodd"
                       />
                     </svg>
-                    {feature}
+                    <span className="text-white/90">{program}</span>
                   </li>
                 ))}
               </ul>
-
-              {/* CTA */}
-              <Link
-                href={`/academics/${program.title.toLowerCase()}`}
-                className="inline-flex items-center gap-2 text-[#F8C300] font-semibold group-hover:underline"
-              >
-                Learn More
-                <svg
-                  className="w-4 h-4 group-hover:translate-x-1 transition-transform"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M17 8l4 4m0 0l-4 4m4-4H3"
-                  />
-                </svg>
-              </Link>
             </div>
           ))}
+        </div>
+
+        {/* PG Program */}
+        <h3 className="text-2xl font-bold text-[#001C54] mb-6">
+          Postgraduate Programs
+        </h3>
+        <div className="max-w-md">
+          <div className="bg-[#16336e] rounded-2xl p-6 text-white hover:shadow-2xl transition-all hover:-translate-y-1">
+            <h4 className="text-xl font-bold mb-4 text-[#F8C300]">
+              M.Com Program
+            </h4>
+            <div className="flex items-start gap-2 text-sm">
+              <svg
+                className="w-5 h-5 text-[#F8C300] flex-shrink-0 mt-0.5"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                  clipRule="evenodd"
+                />
+              </svg>
+              <span className="text-white/90">M.Com (ACCA)</span>
+            </div>
+          </div>
         </div>
       </div>
     </section>

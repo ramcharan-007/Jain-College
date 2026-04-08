@@ -17,7 +17,7 @@ const EnquirySection = () => {
   };
 
   return (
-    <section className="py-16 bg-gradient-to-r from-[#001C54] to-[#16336e] relative overflow-hidden">
+    <section id="enquiry" className="py-16 bg-gradient-to-r from-[#001C54] to-[#16336e] relative overflow-hidden">
       {/* Subtle pattern overlay */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.4%22%3E%3Cpath%20d%3D%22M36%2034v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6%2034v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6%204V0H4v4H0v2h4v4h2V6h4V4H6z%22%2F%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E')]"></div>
@@ -114,12 +114,25 @@ const EnquirySection = () => {
                   className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-[#F8C300] focus:ring-2 focus:ring-[#F8C300]/20 outline-none text-gray-700 text-sm transition-all appearance-none bg-white"
                 >
                   <option value="">Select Programme</option>
-                  <option value="puc-science">PUC Science</option>
-                  <option value="puc-commerce">PUC Commerce</option>
-                  <option value="puc-arts">PUC Arts/Humanities</option>
-                  <option value="ug">UG Courses</option>
-                  <option value="pg">PG Courses</option>
-                  <option value="integrated">Integrated Courses</option>
+                  <optgroup label="B.Com Programs">
+                    <option value="bcom-regular">B.Com (Regular)</option>
+                    <option value="bcom-acca">B.Com (ACCA)</option>
+                    <option value="bcom-bda">B.Com (Business Data Analytics)</option>
+                    <option value="bcom-lscm">B.Com (Logistics &amp; Supply Chain Management)</option>
+                  </optgroup>
+                  <optgroup label="BBA Programs">
+                    <option value="bba-regular">BBA (Regular)</option>
+                    <option value="bba-aviation">BBA (Aviation Management)</option>
+                    <option value="bba-analytics">BBA (Business Analytics)</option>
+                    <option value="bba-digital-marketing">BBA (Digital Marketing)</option>
+                  </optgroup>
+                  <optgroup label="BCA Programs">
+                    <option value="bca">BCA</option>
+                    <option value="bca-aiml">BCA (AI &amp; ML)</option>
+                  </optgroup>
+                  <optgroup label="Postgraduate">
+                    <option value="mcom-acca">M.Com (ACCA)</option>
+                  </optgroup>
                 </select>
                 <textarea
                   placeholder="Your Message (optional)"

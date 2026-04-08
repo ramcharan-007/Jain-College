@@ -96,89 +96,81 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Academics */}
+          {/* Programmes */}
           <div>
-            <h3 className="text-[#F8C300] font-bold text-lg mb-4">Academics</h3>
+            <h3 className="text-[#F8C300] font-bold text-lg mb-4">Programmes</h3>
             <ul className="space-y-2 text-sm">
               <li>
                 <Link
-                  href="/academics/igcse"
+                  href="#programmes"
                   className="hover:text-[#F8C300] transition-colors"
                 >
-                  › IGCSE
+                  › B.Com Programs
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/academics/ibdp"
+                  href="#programmes"
                   className="hover:text-[#F8C300] transition-colors"
                 >
-                  › IBDP
+                  › BBA Programs
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/academics/cbse"
+                  href="#programmes"
                   className="hover:text-[#F8C300] transition-colors"
                 >
-                  › CBSE
+                  › BCA Programs
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/academics/aice"
+                  href="#programmes"
                   className="hover:text-[#F8C300] transition-colors"
                 >
-                  › A-ICE
+                  › M.Com (ACCA)
                 </Link>
               </li>
             </ul>
           </div>
 
-          {/* Campus Life */}
+          {/* Pathways */}
           <div>
             <h3 className="text-[#F8C300] font-bold text-lg mb-4">
-              Campus Life
+              Pathways
             </h3>
             <ul className="space-y-2 text-sm">
               <li>
                 <Link
-                  href="/campus-life/boarding"
+                  href="#pathways"
                   className="hover:text-[#F8C300] transition-colors"
                 >
-                  › Boarding
+                  › 1+2/3 Pathway
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/campus-life/sports"
+                  href="#pathways"
                   className="hover:text-[#F8C300] transition-colors"
                 >
-                  › Sports
+                  › 2+1 Pathway
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/campus-life/arts"
+                  href="#pathways"
                   className="hover:text-[#F8C300] transition-colors"
                 >
-                  › Arts & Culture
+                  › 2+2 Pathway
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/campus-life/clubs"
+                  href="#pathways"
                   className="hover:text-[#F8C300] transition-colors"
                 >
-                  › Clubs & Activities
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/campus-life/dining"
-                  className="hover:text-[#F8C300] transition-colors"
-                >
-                  › Dining
+                  › 1+1 PG Pathway
                 </Link>
               </li>
             </ul>
@@ -192,7 +184,7 @@ const Footer = () => {
             <ul className="space-y-2 text-sm">
               <li>
                 <Link
-                  href="/about"
+                  href="#about"
                   className="hover:text-[#F8C300] transition-colors"
                 >
                   › About Us
@@ -200,7 +192,23 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  href="/admissions"
+                  href="#why-jcis"
+                  className="hover:text-[#F8C300] transition-colors"
+                >
+                  › Why JCIS
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="#partners"
+                  className="hover:text-[#F8C300] transition-colors"
+                >
+                  › Partner Universities
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="#admissions"
                   className="hover:text-[#F8C300] transition-colors"
                 >
                   › Admissions
@@ -208,91 +216,33 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  href="/news"
+                  href="#faq"
                   className="hover:text-[#F8C300] transition-colors"
                 >
-                  › News & Events
+                  › FAQs
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/gallery"
+                  href="/contact"
                   className="hover:text-[#F8C300] transition-colors"
                 >
-                  › Photo Gallery
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/careers"
-                  className="hover:text-[#F8C300] transition-colors"
-                >
-                  › Careers
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/alumni"
-                  className="hover:text-[#F8C300] transition-colors"
-                >
-                  › Alumni
+                  › Contact
                 </Link>
               </li>
             </ul>
           </div>
 
-          {/* Explore */}
+          {/* Partner Universities */}
           <div>
-            <h3 className="text-[#F8C300] font-bold text-lg mb-4">Explore</h3>
+            <h3 className="text-[#F8C300] font-bold text-lg mb-4">Partner Universities</h3>
             <ul className="space-y-2 text-sm">
-              <li>
-                <Link
-                  href="/virtual-tour"
-                  className="hover:text-[#F8C300] transition-colors"
-                >
-                  › Virtual Tour
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/achievements"
-                  className="hover:text-[#F8C300] transition-colors"
-                >
-                  › Achievements
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/infrastructure"
-                  className="hover:text-[#F8C300] transition-colors"
-                >
-                  › Infrastructure
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/student-support"
-                  className="hover:text-[#F8C300] transition-colors"
-                >
-                  › Student Support
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/terms"
-                  className="hover:text-[#F8C300] transition-colors"
-                >
-                  › Terms & Conditions
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/privacy"
-                  className="hover:text-[#F8C300] transition-colors"
-                >
-                  › Privacy Policy
-                </Link>
-              </li>
+              <li className="text-white/80">› Bangkok University, Thailand</li>
+              <li className="text-white/80">› VIC University, Spain</li>
+              <li className="text-white/80">› Frankfurt School, Germany</li>
+              <li className="text-white/80">› Taylor&apos;s University, Malaysia</li>
+              <li className="text-white/80">› Charles Sturt University, Australia</li>
+              <li className="text-white/80">› University of York, UK</li>
             </ul>
           </div>
         </div>
@@ -302,9 +252,8 @@ const Footer = () => {
       <div className="border-t border-white/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
           <p className="text-center text-sm text-white/70">
-            © {new Date().getFullYear()} Jain College Global Campus.
-            All Rights Reserved. | Site Designed & Maintained by Office of
-            Communications, JAIN Group
+            © {new Date().getFullYear()} JAIN College — Centre for International Studies.
+            All Rights Reserved. | JAIN Group of Institutions
           </p>
         </div>
       </div>

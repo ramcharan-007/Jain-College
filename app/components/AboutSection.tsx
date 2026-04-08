@@ -1,13 +1,13 @@
-import Link from "next/link";
+import Image from "next/image";
 
 const AboutSection = () => {
   return (
-    <section className="py-20 bg-white">
+    <section id="about" className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-3xl lg:text-4xl font-bold text-[#001C54] mb-4">
-            About Jain College Global Campus
+            About Us
           </h2>
           <div className="w-24 h-1 bg-[#F8C300] mx-auto rounded-full"></div>
         </div>
@@ -16,151 +16,129 @@ const AboutSection = () => {
           {/* Image Placeholder */}
           <div className="relative">
             <div className="relative w-full h-[400px] rounded-2xl overflow-hidden shadow-lg">
-              {/* Yellow accent border */}
               <div className="absolute top-4 left-4 w-full h-full bg-[#F8C300] rounded-2xl -z-10"></div>
-
-              {/* Placeholder Image */}
-              <div className="w-full h-full bg-gradient-to-br from-[#16336e] to-[#001C54] flex items-center justify-center">
-                <div className="text-center text-white/50">
-                  <svg
-                    className="w-20 h-20 mx-auto mb-4"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z"
-                      clipRule="evenodd"
-                    />
-                  </svg>
-                  <p className="text-sm">Campus Image Placeholder</p>
-                </div>
-              </div>
+              <Image
+                src="/images/campus-building.jpg"
+                alt="JAIN College campus building"
+                fill
+                className="object-cover"
+              />
             </div>
           </div>
 
           {/* Content */}
           <div className="space-y-6">
             <p className="text-lg text-gray-600 leading-relaxed">
-              Founded by{" "}
               <span className="font-semibold text-[#001C54]">
-                Dr. Chenraj Roychand in 1999
+                Sri Bhagawan Mahaveer Jain Educational and Cultural Trust
               </span>
-              , Jain Collge Global Campus is rooted in tradition
-              while making the student community thrive with the ever-changing
-              world and grow within to create a global impact.
+              , Established in 1990, JAIN College is part of the renowned JAIN Group of Institutions,
+              founded by visionary educator{" "}
+              <span className="font-semibold text-[#001C54]">
+                Dr. Chenraj Roychand
+              </span>
+              . Over the past three decades, the JAIN Group has grown into one
+              of India&apos;s most respected educational ecosystems, offering programs
+              across schools, pre-university colleges, undergraduate
+              institutions, universities, and research centres.
             </p>
 
             <p className="text-lg text-gray-600 leading-relaxed">
-              As one of the top PU Colleges in Bangalore, JAIN College Global
-              Campus has a real sense of responsibility to making young minds
-              resilient, motivated and resourceful.
+              The JAIN Group operates a large academic network that includes{" "}
+              <span className="font-semibold text-[#001C54]">
+                70+ educational institutions, 60+ campuses and centres, 75,000+
+                students, and 10,000+ faculty and staff
+              </span>{" "}
+              across India.
             </p>
 
-            {/* Highlight Box */}
-            <div className="bg-[#F8C300]/10 border-l-4 border-[#F8C300] p-6 rounded-r-lg">
-              <p className="text-[#001C54] font-medium italic">
-                "We believe in nurturing every aspect of a student&apos;s
-                growth. Our programs extend beyond textbooks, making us truly a
-                global school."
-              </p>
-            </div>
+            <p className="text-lg text-gray-600 leading-relaxed">
+              Located in{" "}
+              <span className="font-semibold text-[#001C54]">
+                Bengaluru — the Silicon Valley &amp; Startup capital of India
+              </span>
+              , JAIN College provides students with access to one of the
+              world&apos;s fastest-growing technology, startup, and innovation
+              ecosystems, offering valuable industry exposure and global career
+              opportunities alongside their academic studies.
+            </p>
 
             {/* Features */}
             <div className="grid grid-cols-2 gap-4 pt-4">
-              <div className="flex items-start gap-3">
-                <div className="w-6 h-6 rounded-full bg-[#F8C300] flex items-center justify-center flex-shrink-0 mt-1">
-                  <svg
-                    className="w-4 h-4 text-[#001C54]"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                      clipRule="evenodd"
-                    />
-                  </svg>
+              {[
+                "70+ Educational Institutions",
+                "60+ Campuses & Centres",
+                "75,000+ Students",
+                "10,000+ Faculty & Staff",
+              ].map((feature, index) => (
+                <div key={index} className="flex items-start gap-3">
+                  <div className="w-6 h-6 rounded-full bg-[#F8C300] flex items-center justify-center flex-shrink-0 mt-1">
+                    <svg
+                      className="w-4 h-4 text-[#001C54]"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                        clipRule="evenodd"
+                      />
+                    </svg>
+                  </div>
+                  <p className="text-[#001C54] font-medium">{feature}</p>
                 </div>
-                <p className="text-[#001C54] font-medium">
-                  Holistic Development
-                </p>
-              </div>
-              <div className="flex items-start gap-3">
-                <div className="w-6 h-6 rounded-full bg-[#F8C300] flex items-center justify-center flex-shrink-0 mt-1">
-                  <svg
-                    className="w-4 h-4 text-[#001C54]"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                      clipRule="evenodd"
-                    />
-                  </svg>
-                </div>
-                <p className="text-[#001C54] font-medium">
-                  World-Class Faculty
-                </p>
-              </div>
-              <div className="flex items-start gap-3">
-                <div className="w-6 h-6 rounded-full bg-[#F8C300] flex items-center justify-center flex-shrink-0 mt-1">
-                  <svg
-                    className="w-4 h-4 text-[#001C54]"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                      clipRule="evenodd"
-                    />
-                  </svg>
-                </div>
-                <p className="text-[#001C54] font-medium">
-                  International Curriculum
-                </p>
-              </div>
-              <div className="flex items-start gap-3">
-                <div className="w-6 h-6 rounded-full bg-[#F8C300] flex items-center justify-center flex-shrink-0 mt-1">
-                  <svg
-                    className="w-4 h-4 text-[#001C54]"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                      clipRule="evenodd"
-                    />
-                  </svg>
-                </div>
-                <p className="text-[#001C54] font-medium">
-                  State-of-Art Infrastructure
-                </p>
-              </div>
+              ))}
             </div>
+          </div>
+        </div>
 
-            <Link
-              href="/about"
-              className="inline-flex items-center gap-2 bg-[#001C54] text-white px-8 py-3 rounded-full font-semibold hover:bg-[#16336e] transition-colors mt-4"
-            >
-              Read More
-              <svg
-                className="w-5 h-5"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M17 8l4 4m0 0l-4 4m4-4H3"
-                />
-              </svg>
-            </Link>
+        {/* Centre for International Studies */}
+        <div className="mt-20">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl lg:text-4xl font-bold text-[#001C54] mb-4">
+              Centre for International Studies
+            </h2>
+            <div className="w-24 h-1 bg-[#F8C300] mx-auto rounded-full"></div>
+          </div>
+
+          <div className="max-w-4xl mx-auto space-y-6">
+            <p className="text-lg text-gray-600 leading-relaxed text-center">
+              The Centre for International Studies at JAIN College enables
+              students to begin their academic journey in India and progress to
+              partner universities across the world. Through structured
+              international pathways, students can seamlessly transfer abroad and
+              graduate with{" "}
+              <span className="font-semibold text-[#001C54]">
+                internationally recognised degrees
+              </span>
+              .
+            </p>
+
+            <p className="text-lg text-gray-600 leading-relaxed text-center">
+              With a strong focus on{" "}
+              <span className="font-semibold text-[#001C54]">
+                global academic partnerships, international mobility, and
+                career-focused learning
+              </span>
+              , the Centre prepares students to succeed in an increasingly
+              globalised world. JAIN College also maintains a strong
+              international student network across the SAARC region and Africa,
+              creating a diverse and globally connected learning environment.
+            </p>
+
+            {/* Highlight Box */}
+            <div className="bg-[#001C54] rounded-2xl p-8 text-center">
+              <h3 className="text-[#F8C300] font-bold text-xl mb-4">
+                Program Overview
+              </h3>
+              <p className="text-white/90 leading-relaxed">
+                Students start their academic journey at JAIN College, building
+                a strong foundational curriculum before transferring approved
+                academic credits to a recognised partner university abroad to
+                complete their (UG/PG) degree and gain valuable international
+                exposure.
+              </p>
+            </div>
           </div>
         </div>
       </div>

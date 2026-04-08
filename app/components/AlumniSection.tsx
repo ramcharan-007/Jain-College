@@ -1,13 +1,13 @@
 const AlumniSection = () => {
   const alumni = [
-    { name: "Student 1", field: "Technology" },
-    { name: "Student 2", field: "Sports" },
-    { name: "Student 3", field: "Arts" },
-    { name: "Student 4", field: "Business" },
-    { name: "Student 5", field: "Medicine" },
-    { name: "Student 6", field: "Research" },
-    { name: "Student 7", field: "Entertainment" },
-    { name: "Student 8", field: "Social Work" },
+    { name: "Student 1", field: "Technology", initials: "AK", color: "from-blue-400 to-blue-600" },
+    { name: "Student 2", field: "Sports", initials: "RS", color: "from-green-400 to-green-600" },
+    { name: "Student 3", field: "Arts", initials: "PM", color: "from-purple-400 to-purple-600" },
+    { name: "Student 4", field: "Business", initials: "VN", color: "from-orange-400 to-orange-600" },
+    { name: "Student 5", field: "Medicine", initials: "SK", color: "from-red-400 to-red-600" },
+    { name: "Student 6", field: "Research", initials: "DP", color: "from-teal-400 to-teal-600" },
+    { name: "Student 7", field: "Entertainment", initials: "RJ", color: "from-pink-400 to-pink-600" },
+    { name: "Student 8", field: "Social Work", initials: "NR", color: "from-indigo-400 to-indigo-600" },
   ];
 
   return (
@@ -35,20 +35,10 @@ const AlumniSection = () => {
           {alumni.map((person, index) => (
             <div key={index} className="relative group">
               {/* Avatar Placeholder */}
-              <div className="w-24 h-32 lg:w-28 lg:h-40 rounded-lg overflow-hidden bg-gradient-to-b from-[#F8C300]/20 to-[#F8C300]/40 flex items-end justify-center transition-transform group-hover:scale-105">
+              <div className={`w-24 h-32 lg:w-28 lg:h-40 rounded-lg overflow-hidden bg-gradient-to-b ${person.color} flex items-end justify-center transition-transform group-hover:scale-105`}>
                 <div className="text-center pb-2">
                   <div className="w-16 h-16 lg:w-20 lg:h-20 mx-auto bg-white/20 rounded-full flex items-center justify-center mb-2">
-                    <svg
-                      className="w-10 h-10 text-white/50"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                    >
-                      <path
-                        fillRule="evenodd"
-                        d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"
-                        clipRule="evenodd"
-                      />
-                    </svg>
+                    <span className="text-white font-bold text-xl lg:text-2xl">{person.initials}</span>
                   </div>
                   <p className="text-white text-xs font-medium">
                     {person.field}

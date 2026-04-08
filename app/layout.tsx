@@ -9,9 +9,9 @@ const roboto = Roboto({
 });
 
 export const metadata: Metadata = {
-  title: "JAIN College Global Campus",
+  title: "JAIN College - Centre for International Studies",
   description:
-    "JAIN College Global Campus - Among the top PU Colleges in Bangalore. Founded by Dr. Chenraj Roychand, nurturing young minds to be resilient, motivated and resourceful.",
+    "JAIN College Centre for International Studies - Start your degree in India, graduate with a global degree. International pathways to partner universities in UK, USA, Canada, Europe & Australia.",
 };
 
 export default function RootLayout({

@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 
 const WhyJainSection = () => {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -106,29 +107,14 @@ const WhyJainSection = () => {
 
           {/* Image with Student */}
           <div className="relative">
-            <div className="relative w-full h-[500px] rounded-2xl overflow-hidden">
-              {/* Placeholder Image */}
-              <div className="w-full h-full bg-gradient-to-br from-[#F8C300] to-[#dfb82d] flex items-center justify-center">
-                <div className="text-center text-[#001C54]/50">
-                  <svg
-                    className="w-24 h-24 mx-auto mb-4"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"
-                      clipRule="evenodd"
-                    />
-                  </svg>
-                  <p className="text-sm font-medium">
-                    Student Image Placeholder
-                  </p>
-                  <p className="text-xs mt-1">
-                    Happy student with welcoming gesture
-                  </p>
-                </div>
-              </div>
+            <div className="relative w-full h-[500px] rounded-2xl overflow-hidden shadow-lg">
+              <Image
+                src="/images/student-campus.jpg"
+                alt="Happy students at JAIN College campus"
+                fill
+                className="object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#001C54]/30 to-transparent"></div>
             </div>
           </div>
         </div>
