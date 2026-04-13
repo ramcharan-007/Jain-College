@@ -550,7 +550,7 @@ const ContactFormSection = () => {
                 </h3>
                 <div className="space-y-2 text-sm">
                   <a
-                    href="mailto:info@jaincollege.ac.in"
+                    href="mailto:jccisglobal@gmail.com"
                     className="flex items-center gap-2 text-gray-700 hover:text-[#001C54]"
                   >
                     <svg
@@ -566,7 +566,7 @@ const ContactFormSection = () => {
                         d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
                       />
                     </svg>
-                    info@jaincollege.ac.in
+                    jccisglobal@gmail.com
                   </a>
                   <a
                     href="mailto:puc.enquiry@jaincollege.ac.in"

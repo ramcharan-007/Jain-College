@@ -33,11 +33,22 @@ const HeroSection = () => {
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    await new Promise((resolve) => setTimeout(resolve, 1000));
-    setIsSubmitting(false);
-    setSubmitted(true);
-    setFormData({ name: "", email: "", phone: "", programme: "", message: "" });
-    setTimeout(() => setSubmitted(false), 5000);
+    try {
+      const res = await fetch("/api/enquiry", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+      const data = await res.json();
+      if (!res.ok) throw new Error(data.error || "Something went wrong");
+      setSubmitted(true);
+      setFormData({ name: "", email: "", phone: "", programme: "", message: "" });
+      setTimeout(() => setSubmitted(false), 5000);
+    } catch (err) {
+      console.error(err);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -45,13 +56,13 @@ const HeroSection = () => {
       {/* Background Image */}
       <div className="absolute inset-0">
         <Image
-          src="/images/hero-students.jpg"
+          src="/images/hero-page.jpg"
           alt="Students at JAIN College campus"
           fill
           className="object-cover"
           priority
         />
-        <div className="absolute inset-0 bg-gradient-to-br from-[#001C54]/50 via-[#0a2a6b]/65 to-[#16336e]/50"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-[#001C54]/50 via-[#0a2a6b]/50 to-[#16336e]/50"></div>
       </div>
 
       {/* Background decorative elements */}
@@ -270,7 +281,7 @@ const HeroSection = () => {
       </div>
 
       {/* Wave Divider */}
-      <div className="absolute bottom-0 left-0 right-0 z-10">
+      {/* <div className="absolute bottom-0 left-0 right-0 z-10">
         <svg
           viewBox="0 0 1440 120"
           fill="none"
@@ -281,7 +292,7 @@ const HeroSection = () => {
             fill="white"
           />
         </svg>
-      </div>
+      </div> */}
     </section>
   );
 };

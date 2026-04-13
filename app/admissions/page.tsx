@@ -42,9 +42,21 @@ const HeroSection = () => {
     console.log("Login:", loginData);
   };
 
-  const handleRegister = (e: FormEvent) => {
+  const handleRegister = async (e: FormEvent) => {
     e.preventDefault();
-    console.log("Register:", registerData);
+    try {
+      const res = await fetch("/api/admission", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(registerData),
+      });
+      const data = await res.json();
+      if (!res.ok) throw new Error(data.error || "Something went wrong");
+      alert("Registration successful!");
+      setRegisterData({ board: "", name: "", email: "", mobile: "", password: "", confirmPassword: "" });
+    } catch (err) {
+      alert(err instanceof Error ? err.message : "Failed to register");
+    }
   };
 
   return (
@@ -52,7 +64,7 @@ const HeroSection = () => {
       {/* Background Image */}
       <div className="absolute inset-0">
         <Image
-          src="/images/campus-building.jpg"
+          src="/images/admissions-hero.jpg"
           alt="JAIN College Students"
           fill
           className="object-cover"
@@ -324,9 +336,9 @@ const ProgrammesSection = () => (
       <div className="max-w-3xl mx-auto">
         <div className="bg-white rounded-xl border border-gray-200 shadow-sm overflow-hidden">
           {/* Campus Image */}
-          <div className="relative h-56 bg-gray-100">
+          <div className="relative h-100 bg-gray-100">
             <Image
-              src="/images/campus-building.jpg"
+              src="/images/about-us.jpg"
               alt="Vasavi Road Campus"
               fill
               className="object-cover"
